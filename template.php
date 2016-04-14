@@ -9,22 +9,20 @@ function aqh_preprocess_html (&$vars) {
     $dynamic = strpos($current_uri, "?");
     if($dynamic == TRUE) {
       $noindex = array(
-        '#tag' => 'meta',
-        '#attributes' => array(
-          'name' => 'robots',
-          'content' => "noindex, follow",
-        ),
+          '#tag' => 'meta',
+          '#attributes' => array(
+              'name' => 'robots',
+              'content' => "noindex, follow",
+          ),
       );
       drupal_add_html_head($noindex, 'noindex_follow');
     }
   }
   // Add Font Awesome
   // drupal_add_css('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array('group' => CSS_THEME, 'type' => 'external'));
-
   // Add Local styles
-   drupal_add_css('http://localhost:8080/dev/aqh/css/style.css', array('group' => CSS_THEME, 'type' => 'external'));
+  drupal_add_css('http://localhost:8080/dev/aqh/css/style.css', array('group' => CSS_THEME, 'type' => 'external'));
 }
-
 /**
  * Fix for SEO
  */
@@ -34,7 +32,6 @@ function aqh_html_head_alter(&$head_elements) {
     if (isset($element['#attributes']['rel']) && $element['#attributes']['rel'] == 'shortlink') {
       unset($head_elements[$key]);
     }
-
     // Unset Short link
     if (drupal_is_front_page()) {
       if (isset($element['#attributes']['rel']) && $element['#attributes']['rel'] == 'canonical'){
@@ -43,7 +40,6 @@ function aqh_html_head_alter(&$head_elements) {
     }
   }
 }
-
 /**
  * Add Bootstrap functionality to main menu.
  */
@@ -51,7 +47,6 @@ function aqh_menu_tree__main_menu(&$vars) {
   $output = _bootstrap_link_formatter($vars);
   return $output;
 }
-
 /**
  * Provide a bootstrap multilevel menu
  */
@@ -59,11 +54,10 @@ function aqh_menu_link__main_menu(&$vars) {
   $output = _bootstrap_multilevel_menu($vars);
   return $output;
 }
-
 /* Helper function for formatting links to bootstrap styles */
 function _bootstrap_link_formatter(&$vars){
   $output =
-    '<nav class="navbar navbar-default">
+      '<nav class="navbar navbar-default">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
@@ -73,7 +67,6 @@ function _bootstrap_link_formatter(&$vars){
 					<span class="icon-bar"></span>
 				</button>
 			</div>
-
 			<div class="collapse navbar-collapse" id="bs-navbar-collapse">
 				<ul class="nav navbar-nav">'. $vars['tree'].'</ul>
 			</div>
@@ -81,7 +74,6 @@ function _bootstrap_link_formatter(&$vars){
 	</nav>';
   return $output;
 }
-
 // Helper function to provide a bootstrap multilevel menu
 // See for details http://www.drupalgeeks.com/drupal-blog/how-render-bootstrap-sub-menus
 function _bootstrap_multilevel_menu($vars) {
