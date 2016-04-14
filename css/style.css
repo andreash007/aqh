@@ -7343,8 +7343,31 @@ button.close {
   font-family: "ProximaNova";
   src: url(/sites/all/themes/aqh/fonts/ProximaNova/fonts/ProximaNova-Regular.ttf) format('truetype'), url(/sites/all/themes/aqh/fonts/ProximaNova/fonts/ProximaNova-Regular.eot) format('embedded-opentype'), url(/sites/all/themes/aqh/fonts/ProximaNova/fonts/ProximaNova-Regular.woff) format('woff'), url(/sites/all/themes/aqh/fonts/ProximaNova/fonts/ProximaNova-Regular.svg) format('svg');
 }
-body a {
+h1, h2, h3 {
+  font-family: proxima-nova,Helvetica,Arial,sans-serif;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 1.07142857;
+  font-weight: 400;
+  font-style: bold;
+  margin: 0 0 20px 0;
+  color: #222;
+}
+
+.field-name-field-body a {
   font-weight: bold;
+  color: #000000;
+}
+.field-name-field-body p {
+  font-family: Arial,Helvetica,sans-serif;
+  color: #555;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0 0 20px 0;
 }
 
 .pane-header {
