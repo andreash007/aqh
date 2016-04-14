@@ -1,0 +1,40 @@
+#social-tab {
+  position: fixed;
+  z-index: 100;
+  top: 113px;
+  margin-top: 80px;
+  left: 0;
+  width: 50px;
+  list-style: none;
+  background: #000;
+  padding: 0;
+  margin: 0;
+  padding: 1px 10px;
+
+  li {
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    a {
+      display: block;
+      width: 30px;
+      height: 31px;
+      background-image: url("../img/social-tab.png");
+
+      text-indent: -99999px;
+
+      &.social-twitter {
+        background-position: 0 -39px
+      }
+
+      &.social-google-plus {
+        background-position: 0 -79px
+      }
+
+      &.social-linkedin {
+        background-position: 0 -119px
+      }
+    }
+
+  }
+}

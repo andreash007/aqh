@@ -1,3 +1,31 @@
 // Blog list
 
+
 // Single blog page
+.node-type-blog{
+
+  .pane-page-content {
+    background: #fff;
+    padding: 50px 0;
+
+    .pane-content {
+      @extend .container;
+
+      .panel-display {
+        @include make-row();
+      }
+
+      .pane-node-created {
+
+        .pane-content {
+          margin: -15px 0 30px 0;
+          font-family: $font-stack;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.1;
+          color: #000;
+        }
+      }
+    }
+  }
+}
