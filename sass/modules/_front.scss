@@ -1,0 +1,16 @@
+//SLIDER
+.pane-views-slideshow-block {
+  .views-slideshow-cycle-main-frame-row {
+    width: 100%!important;
+    height: auto!important;
+    max-height: 843px;
+    overflow: hidden;
+  }
+
+  .views-field-field-img {
+    img {
+      width: 100%!important;
+      height: auto!important;
+    }
+  }
+}

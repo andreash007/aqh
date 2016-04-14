@@ -1,5 +1,10 @@
 //Fonts
-@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+//Fonts
+@include font-face("ProximaNova", font-files(
+    "/sites/all/themes/aqh/fonts/ProximaNova/fonts/ProximaNova-Regular.ttf",
+    "/sites/all/themes/aqh/fonts/ProximaNova/fonts/ProximaNova-Regular.eot",
+    "/sites/all/themes/aqh/fonts/ProximaNova/fonts/ProximaNova-Regular.woff",
+    "/sites/all/themes/aqh/fonts/ProximaNova/fonts/ProximaNova-Regular.svg"
+));
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100&subset=latin,cyrillic);
-$font-stack: 'Roboto', sans-serif;
+$font-stack: 'ProximaNova',Helvetica,Arial,sans-serif;

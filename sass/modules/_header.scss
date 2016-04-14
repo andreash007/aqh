@@ -1,0 +1,118 @@
+.pane-header {
+  background: black;
+  border-color: #fff;
+  border-width: 0 0 2px 0;
+  padding: 13px 0 0 0;
+  margin-bottom: 0;
+
+  > .pane-content {
+    @extend .container;
+  }
+
+  //LOGO
+  .pane-page-logo {
+    float: left;
+    width: 20%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  //MENU
+  .pane-system-main-menu {
+    float: left;
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .navbar-default {
+      background: none;
+      border: none;
+      margin-bottom: 0;
+
+      li {
+        height: 59px;
+        background: url(../img/nav-divider.png) right 7px no-repeat;
+
+        //&:last-child {background: none;}
+
+
+        a {
+          background-color: transparent;
+          color: #ededee;
+          padding: 0 2px;
+          margin: 10px 15px;
+          font-family: $font-stack;
+          font-size: 16px;
+          font-weight: 300;
+
+          &:hover {
+            border-top: 2px solid #fff;
+            background: none;
+            color: #fff;
+            position: relative;
+            top: -2px;
+
+          }
+        }
+      }
+    }
+  }
+
+  //PHONE
+  .phone {
+    float: left;
+    width: 15%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .pane-content {
+      a {
+        color: #fff;
+        display: block;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        letter-spacing: 2px;
+        font-size: 12px;
+        font-family: $font-stack;
+        font-weight: 100;
+        border: #fff solid 1px;
+        border-radius: 15px;
+
+        &:hover, &:active {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .enquire {
+    float: left;
+    width: 15%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .pane-content {
+      a {
+        color: #333;
+        display: block;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        letter-spacing: 2px;
+        border: #fff solid 1px;
+        border-radius: 15px;
+        font-size: 12px;
+        font-family: $font-stack;
+        font-weight: 600;
+        text-transform: uppercase;
+        background: #fff;
+
+        &:hover, &:active {
+          text-decoration: none;
+          background-color: #e6e6e6;
+        }
+      }
+    }
+  }
+}
