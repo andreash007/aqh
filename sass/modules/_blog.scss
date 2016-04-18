@@ -1,18 +1,145 @@
 // Blog list
+  .page-blog{
 
+    .panel-col-content {
+      @extend .container;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      .inside {
+        @include make-row();
+
+        .pane-page-title, .pane-page-content {
+          @include make-md-column(8);
+        }
+
+        .pane-panels-mini {
+          @include make-md-column(4);
+        }
+      }
+    }
+
+    .pane-page-content{
+
+      .view-header{
+        margin-bottom: 20px;
+
+        .rss{
+          display: inline-block;
+          margin-bottom: 0;
+          padding: 6px 12px;
+          font-family: $font-stack;
+          font-size: 12px;
+          font-weight: 500;
+          border-radius: 22px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: #fff;
+          background-color: #101010;
+          background-image: none;
+          border-color: #030303;
+          text-align: center;
+          vertical-align: middle;
+          cursor: pointer;
+          border: 1px solid transparent;
+          white-space: nowrap;
+          line-height: 1.42857143;
+
+          &:hover{
+            text-decoration: none;
+            background-color: black;
+          }
+        }
+      }
+
+      .views-row{
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+
+        p{
+          margin-bottom: 20px;
+        }
+
+        .views-field-title {
+          margin: 0 0 20px 0;
+
+          a {
+            font-family: $font-stack;
+            font-size: 22px;
+            line-height: 1.42857143;
+            font-weight: 100;
+            font-style: normal;
+            color: #000;
+          }
+        }
+
+        .views-field-created span{
+          display: block;
+          margin: -15px 0 20px 0;
+          font-family: $font-stack;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 1.1;
+          color: #000;
+          text-transform: uppercase;
+        }
+
+        .views-field-view-node{
+
+          a{
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 30px;
+            font-family: $font-stack;
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 22px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            background-color: #101010;
+            background-image: none;
+            border-color: #000;
+            line-height: 1.33;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 1px solid transparent;
+            white-space: nowrap;
+
+            &:hover{
+              background-color: black;
+              text-decoration: none;
+              outline: 0;
+            }
+
+            &:after{
+              margin-left: 5px;
+              font: normal 14px/1 FontAwesome;
+              content: "\f054";
+            }
+          }
+        }
+      }
+    }
+  }
 
 // Single blog page
-.node-type-blog{
 
-  .pane-page-content {
-    background: #fff;
-    padding: 50px 0;
+.node-type-blog {
 
-    .pane-content {
-      @extend .container;
+  .panel-display {
+    @include make-row();
 
-      .panel-display {
-        @include make-row();
+    .panel-col-left {
+
+      h1{
+        margin-bottom: 28px;
+      }
+
+      p{
+        margin-bottom: 20px;
       }
 
       .pane-node-created {
@@ -29,3 +156,4 @@
     }
   }
 }
+

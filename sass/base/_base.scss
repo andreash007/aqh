@@ -1,5 +1,33 @@
+body {
+
+  a{
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:visited{
+    text-decoration: none;
+  }
+  a:active, a:hover {
+    outline: 0;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #000;
+  }
+}
+
 h1, h2, h3 {
   font-family: proxima-nova,Helvetica,Arial,sans-serif;
+}
+
+h1{
+  font-size: 38px;
+  line-height: 1.07142857;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0 0 20px 0;
+  color: #000;
 }
 
 h3 {
@@ -10,19 +38,111 @@ h3 {
   color: #222;
 }
 
-.field-name-body {
-  a {
-    font-weight: bold;
-    color: #000000;
-  }
+h2{
+  font-size: 22px;
+  line-height: 1.42857143;
+  font-weight: 100;
+  font-style: normal;
+  margin: 0 0 20px 0;
+  color: #222;
+}
 
-  p {
-    font-family: Arial,Helvetica,sans-serif;
-    color: #555;
-    font-size: 14px;
-    line-height: 2;
-    font-weight: 300;
-    font-style: normal;
-    margin: 0 0 20px 0;
+
+p {
+  font-family: Arial,Helvetica,sans-serif;
+  color: #555;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0 0 20px 0;
+}
+
+.pane-pane-messages{
+  @extend .container;
+
+  .pane-content{
+    @include make-row();
   }
 }
+
+.page-node {
+
+  .pane-page-content {
+    @extend .container;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    & > .pane-content {
+      @include make-row();
+    }
+  }
+}
+
+.form-control{
+  padding: 10px 16px;
+  height: 50px;
+  font-size: 14px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+.btn-default{
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  font-family: $font-stack;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  border-radius: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: #101010;
+  border-color: #030303;
+
+  &:hover, &:active, &:focus{
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+    text-decoration: none;
+  }
+}
+
+.form-select{
+  font-family: Arial,Helvetica,sans-serif;
+  padding: 6px 25px 6px 12px;
+  width: 220px;
+  border-radius: 0;
+  background-color: #ededed;
+  letter-spacing: 0;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+  color: #333;
+  border-color: #ddd;
+
+  option{
+    color: #777;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

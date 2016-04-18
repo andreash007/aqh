@@ -1,4 +1,11 @@
+.front.page-node .pane-page-content {
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+
 //SLIDER
+.nivo-main-image {display: none!important}
 .pane-views-slideshow-block {
   .views-slideshow-cycle-main-frame-row {
     width: 100%!important;
@@ -15,6 +22,94 @@
   }
 }
 
+//CONTROL-BTN
+.views-slideshow-controls-bottom {
+  .views-slideshow-pager-fields {
+    .views-slideshow-pager-field-item {
+      width: 21px;
+      height: 21px;
+      display: inline-block;
+      padding: 5px 11px 10px 6px;
+
+      &.active {
+        background: url(../img/slider_bullet_bg.png) 0 0 no-repeat;
+
+        .views-content-tid {
+          background: #fff;
+        }
+      }
+
+      .views-content-tid {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ccc;
+        background: rgba(255,255,255,.5);
+        box-shadow: 0 0 1px 0 rgba(0,0,0,.4);
+        font: 0/0 a;
+        color: transparent;
+      }
+    }
+  }
+
+  .views-slideshow-controls-text {
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 40px;
+
+    .views-slideshow-controls-text-pause {display: none;}
+    .views-slideshow-controls-text-previous {
+      height: 40px;
+      width: 40px;
+      display: block;
+      cursor: pointer;
+      z-index: 21;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      a {
+        margin-top: 3px;
+        margin-left: 3px;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        cursor: pointer;
+        background: url(../img/rs-custom-arrows.png) transparent;
+        border-radius: 0;
+        font: 0/0 a;
+      }
+    }
+
+    .views-slideshow-controls-text-next {
+      height: 40px;
+      width: 40px;
+      display: block;
+      cursor: pointer;
+      z-index: 21;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      a {
+        margin-top: 3px;
+        margin-left: 3px;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        cursor: pointer;
+        background: url(../img/rs-custom-arrows.png) transparent;
+        background-position: -40px 0;
+        border-radius: 0;
+        font: 0/0 a;
+      }
+    }
+  }
+}
+
+//SLIDMENU
 .pane-views-slideshow-slidemenu{
   @extend .container;
 
@@ -24,6 +119,16 @@
     min-height: 60px;
     list-style: none;
     position: relative;
+
+    @media screen and (max-width: 991px) {
+      width: 50%;
+      margin-bottom: 2px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+
     .field-content {
       > a {
         position: absolute;
@@ -70,6 +175,10 @@
             opacity: 1;
             bottom: 0;
             visibility: visible;
+
+            @media screen and (max-width: 991px) {
+              display: none;
+            }
           }
         }
       }
@@ -84,7 +193,7 @@
       min-height: 60px;
       color: #fff;
       font-family: $font-stack;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 300;
       z-index: 21;
       -webkit-transition: all .3s ease-in-out;
@@ -105,6 +214,11 @@
         &:hover {
           background: url(../img/grid_hd_expressionseries_70.png) 20px 10px no-repeat #000;;
         }
+
+        @media (max-width: 1199px) and (min-width: 768px) {
+          background-size: 175px 32px!important;
+          background-position: 20px 15px!important
+        }
       }
     }
 
@@ -116,6 +230,11 @@
 
         &:hover {
           background: url(../img/grid_hd_blueprintseries_70.png) 20px 15px no-repeat #000;
+        }
+
+        @media (max-width: 1199px) and (min-width: 768px) {
+          background-size: 175px 23px!important;
+          background-position: 20px 20px!important;
         }
       }
     }
@@ -141,12 +260,14 @@
         text-decoration: underline;
         font-size: 14px;
         font-family: $font-stack;
+        color: white;
       }
 
       p {
         font-size: 12px;
         line-height: 1.5;
         font-family: $font-stack;
+        color: white;
       }
     }
   }

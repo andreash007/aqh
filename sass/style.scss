@@ -1,5 +1,5 @@
 // Import Compass integration
-@import "compass/css3";
+@import 'compass/css3';
 
 // Import Bootstrap Compass integration
 @import "bootstrap-compass";
@@ -24,5 +24,9 @@
 @import "modules/social_tab.scss";
 @import "modules/front";
 @import "modules/blog";
+@import "modules/panels-two-column";
 @import "modules/mini_panel_details";
+@import "modules/follow-us";
+@import "modules/allegro";
+
 

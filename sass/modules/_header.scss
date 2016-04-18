@@ -1,9 +1,9 @@
 .pane-header {
   background: black;
   border-color: #fff;
-  border-width: 0 0 2px 0;
   padding: 13px 0 0 0;
   margin-bottom: 0;
+  border-bottom: 2px solid white;
 
   > .pane-content {
     @extend .container;
@@ -14,6 +14,10 @@
     float: left;
     width: 20%;
     padding: 15px 0;
+
+    @media screen and (max-width: 1199px) {
+      width: 100%;
+    }
   }
 
   //MENU
@@ -23,26 +27,31 @@
     padding-left: 15px;
     padding-right: 15px;
 
+    @media screen and (max-width: 1199px) {
+      padding-left: 0;
+    }
+
     .navbar-default {
       background: none;
       border: none;
       margin-bottom: 0;
 
-      li {
+      .navbar-nav > li {
         height: 59px;
         background: url(../img/nav-divider.png) right 7px no-repeat;
 
-        //&:last-child {background: none;}
+        &:last-child {background: none;}
 
-
-        a {
+        > a {
           background-color: transparent;
           color: #ededee;
-          padding: 0 2px;
+          padding: 2px 0;
           margin: 10px 15px;
           font-family: $font-stack;
-          font-size: 16px;
+          font-size: 15px;
           font-weight: 300;
+
+          .caret {display: none;}
 
           &:hover {
             border-top: 2px solid #fff;
@@ -51,6 +60,56 @@
             position: relative;
             top: -2px;
 
+
+
+            + .dropdown-menu {
+                display: block;
+            }
+          }
+
+          + .dropdown-menu {
+              position: absolute;
+              top: 56%;
+              left: 0;
+              z-index: 1000;
+              display: none;
+              float: left;
+              min-width: 160px;
+              padding: 0;
+              padding-top: 25px;
+              margin: 2px 0 0;
+              list-style: none;
+              font-size: 14px;
+              text-align: left;
+              background-color: #000;
+              border: 1px solid #ddd;
+              border: 1px solid rgba(0,0,0,.15);
+              border-radius: 4px;
+              -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+              box-shadow: 0 6px 12px rgba(0,0,0,.175);
+              background-clip: padding-box;
+
+            &:hover {
+              display: block;
+            }
+
+            li {
+              border-bottom: 1px solid #464646;
+
+              &:last-child {border: none;}
+
+              a {
+                color: #ccc;
+                padding: 10px 30px 10px 20px;
+                font-size: 13px;
+                font-family: $font-stack;
+
+                &:hover {
+                  background: none;
+                  color: #ededee;
+                }
+              }
+            }
           }
         }
       }

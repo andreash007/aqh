@@ -1,0 +1,61 @@
+
+.page-node {
+
+  .panel-col-right {
+    @include make-md-column(4);
+  }
+}
+
+.pane-panels-mini {
+
+  .table-striped > tbody > tr:nth-child(odd) > th, .table-striped > tbody > tr:nth-child(odd) > td {
+    background-color: #f9f9f9;
+  }
+
+  .table th {
+    font-weight: 400;
+    padding-left: 0 !important;
+    color: #555;
+    background: #F7F7F9;
+  }
+
+  .table td {
+    color: #959595;
+  }
+
+  .pane-node {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 360px;
+  }
+
+  .pane-node:last-child {
+
+    .pane-title {
+      border-bottom: 1px solid #e6e6e6;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
