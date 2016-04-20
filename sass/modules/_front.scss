@@ -2,11 +2,22 @@
   padding-top: 0;
   padding-bottom: 0;
   width: 100%;
+
+  .pane-node-content {
+    h1 {
+      display: none;
+    }
+  }
 }
 
 //SLIDER
-.nivo-main-image {display: none!important}
 .pane-views-slideshow-block {
+  .views-field-uri span div{
+    @media screen and (max-width: 767px) {
+      height: 50vh!important
+    }
+  }
+
   .views-slideshow-cycle-main-frame-row {
     width: 100%!important;
     height: auto!important;
@@ -22,88 +33,96 @@
   }
 }
 
-//CONTROL-BTN
-.views-slideshow-controls-bottom {
-  .views-slideshow-pager-fields {
-    .views-slideshow-pager-field-item {
-      width: 21px;
-      height: 21px;
+//CONTROL-BTN/PAGER
+.view-slideshow {
+
+  .carousel-indicators {
+    li {
       display: inline-block;
-      padding: 5px 11px 10px 6px;
+      width: 10px;
+      height: 10px;
+      margin: 6px;
+      border-radius: 50%;
+      background: #CCC;
+      background: rgba(255,255,255,.5);
+      box-shadow: 0 0 1px 0 rgba(0,0,0,.4);
+      position: relative;
 
       &.active {
-        background: url(../img/slider_bullet_bg.png) 0 0 no-repeat;
-
-        .views-content-tid {
-          background: #fff;
+        background: #fff;
+        &:after {
+          content: "";
+          width: 21px;
+          height: 21px;
+          display: inline-block;
+          padding: 5px 11px 10px 6px;
+          background: url(../img/slider_bullet_bg.png) 0 0 no-repeat;
+          position: absolute;
+          top: -6px;
+          left: -7px;
         }
-      }
-
-      .views-content-tid {
-        display: block;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #ccc;
-        background: rgba(255,255,255,.5);
-        box-shadow: 0 0 1px 0 rgba(0,0,0,.4);
-        font: 0/0 a;
-        color: transparent;
       }
     }
   }
 
-  .views-slideshow-controls-text {
-    position: relative;
-    display: block;
-    width: 80px;
+  .carousel-control.left {
     height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 80px;
+    bottom: 20px;
+    top: initial;
+    left: initial;
+    display: block;
+    cursor: pointer;
+    z-index: 21;
+    background: none;
+    opacity: 1;
 
-    .views-slideshow-controls-text-pause {display: none;}
-    .views-slideshow-controls-text-previous {
-      height: 40px;
-      width: 40px;
-      display: block;
-      cursor: pointer;
-      z-index: 21;
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      a {
-        margin-top: 3px;
-        margin-left: 3px;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        cursor: pointer;
-        background: url(../img/rs-custom-arrows.png) transparent;
-        border-radius: 0;
-        font: 0/0 a;
-      }
+    &:hover {
+      background: none;
     }
 
-    .views-slideshow-controls-text-next {
-      height: 40px;
+    .icon-prev {
       width: 40px;
-      display: block;
-      cursor: pointer;
-      z-index: 21;
+      height: 40px;
       position: absolute;
-      top: 0;
-      right: 0;
+      cursor: pointer;
+      background: url(../img/rs-custom-arrows.png) transparent;
+      border-radius: 0;
+      background-position: 0 0;
 
-      a {
-        margin-top: 3px;
-        margin-left: 3px;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        cursor: pointer;
-        background: url(../img/rs-custom-arrows.png) transparent;
-        background-position: -40px 0;
-        border-radius: 0;
-        font: 0/0 a;
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  .carousel-control.right {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    top: initial;
+    left: initial;
+    display: block;
+    cursor: pointer;
+    z-index: 21;
+    background: none;
+    opacity: 1;
+
+    .icon-next{
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      cursor: pointer;
+      background: url(../img/rs-custom-arrows.png) transparent;
+      border-radius: 0;
+      background-position: -40px 0;
+
+      &:before {
+        content: none;
       }
     }
   }
@@ -111,7 +130,27 @@
 
 //SLIDMENU
 .pane-views-slideshow-slidemenu{
-  @extend .container;
+  position: absolute;
+  bottom: 17%;
+  width: 100%;
+
+
+  @media screen and (max-width: 767px) {
+    position: static;
+    padding: 0;
+  }
+
+  ul {
+    padding: 0;
+
+    @media screen and (max-width: 767px) {
+      margin: 0 -15px 0 -16px;
+    }
+  }
+  
+  >.pane-content {
+    @extend .container;
+  }
 
   .views-row {
     float: left;
@@ -127,6 +166,7 @@
 
     @media screen and (max-width: 767px) {
       width: 100%;
+      display: block;
     }
 
     .field-content {
@@ -157,6 +197,10 @@
           position: absolute;
           top: 12px;
           right: 10px;
+
+          @media screen and (max-width: 767px) {
+            content: "\f138";
+          }
         }
 
         &:hover {
@@ -169,6 +213,10 @@
             position: absolute;
             top: 12px;
             right: 10px;
+
+            @media screen and (max-width: 767px) {
+              content: "\f138";
+            }
           }
 
           .wrap {

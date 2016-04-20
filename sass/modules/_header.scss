@@ -1,3 +1,11 @@
+.front {
+  .pane-header {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+  }
+}
+
 .pane-header {
   background: black;
   border-color: #fff;
@@ -7,6 +15,7 @@
 
   > .pane-content {
     @extend .container;
+    position: relative;
   }
 
   //LOGO
@@ -14,9 +23,31 @@
     float: left;
     width: 20%;
     padding: 15px 0;
+    padding-top: 12px;
 
     @media screen and (max-width: 1199px) {
       width: 100%;
+    }
+
+    @media screen and (max-width: 767px){
+      width: 240px;
+      position: absolute;
+      left: 50%;
+      margin-left: -120px;
+      padding: 11px 0;
+      z-index: 999;
+    }
+
+    @media screen and (max-width: 450px){
+      width: 120px;
+      margin-left: -60px;
+    }
+
+    img {
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
@@ -29,6 +60,12 @@
 
     @media screen and (max-width: 1199px) {
       padding-left: 0;
+      width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      float: none;
     }
 
     .navbar-default {
@@ -36,40 +73,89 @@
       border: none;
       margin-bottom: 0;
 
-      .navbar-nav > li {
+      .navbar-toggle {
+        float: none;
+        border: none;
+        margin-top: 4px;
+
+        &:hover, &:focus {
+          background: none;
+        }
+
+        .icon-bar {
+          background-color: #fff;
+          height: 3px;
+        }
+      }
+
+      .navbar-collapse {border: none;}
+
+      .navbar-nav {
+
+        @media screen and (max-width: 1199px) {
+          margin-left: -45px;
+        }
+
+        @media screen and (max-width: 767px) {
+          margin: 0 0 0 -30px;
+        }
+
+        > li {
         height: 59px;
         background: url(../img/nav-divider.png) right 7px no-repeat;
 
-        &:last-child {background: none;}
+        @media screen and (max-width: 767px) {
+          height: auto;
+          background: none;
+        }
 
-        > a {
-          background-color: transparent;
-          color: #ededee;
-          padding: 2px 0;
-          margin: 10px 15px;
-          font-family: $font-stack;
-          font-size: 15px;
-          font-weight: 300;
+        &:last-child {
+          background: none;
+        }
 
-          .caret {display: none;}
-
-          &:hover {
-            border-top: 2px solid #fff;
-            background: none;
-            color: #fff;
-            position: relative;
-            top: -2px;
+          > a {
+            background-color: transparent;
+            color: #ededee;
+            padding: 2px 0;
+            margin: 10px 15px;
+            font-family: $font-stack;
+            font-size: 15px;
+            font-weight: 300;
 
 
+            @media screen and (max-width: 767px) {
+              font-size: 13px;
+            }
+
+            .caret {
+              display: none;
+            }
+
+
+            &:hover {
+              border-top: 2px solid #fff;
+              background: none;
+              color: #fff;
+              position: relative;
+              top: -2px;
+
+              @media screen and (max-width: 767px) {
+                border: none;
+                top: 0;
+              }
+
+              + .dropdown-menu {
+                display: block;
+
+                @media screen and (max-width: 767px) {
+                  display: none;
+                }
+              }
+            }
 
             + .dropdown-menu {
-                display: block;
-            }
-          }
-
-          + .dropdown-menu {
               position: absolute;
-              top: 56%;
+              top: 54%;
               left: 0;
               z-index: 1000;
               display: none;
@@ -83,30 +169,33 @@
               text-align: left;
               background-color: #000;
               border: 1px solid #ddd;
-              border: 1px solid rgba(0,0,0,.15);
+              border: 1px solid rgba(0, 0, 0, .15);
               border-radius: 4px;
-              -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-              box-shadow: 0 6px 12px rgba(0,0,0,.175);
+              -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+              box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
               background-clip: padding-box;
 
-            &:hover {
-              display: block;
-            }
+              &:hover {
+                display: block;
+              }
 
-            li {
-              border-bottom: 1px solid #464646;
+              li {
+                border-bottom: 1px solid #464646;
 
-              &:last-child {border: none;}
+                &:last-child {
+                  border: none;
+                }
 
-              a {
-                color: #ccc;
-                padding: 10px 30px 10px 20px;
-                font-size: 13px;
-                font-family: $font-stack;
+                a {
+                  color: #ccc;
+                  padding: 10px 30px 10px 20px;
+                  font-size: 13px;
+                  font-family: $font-stack;
 
-                &:hover {
-                  background: none;
-                  color: #ededee;
+                  &:hover, {
+                    background: none;
+                    color: #ededee;
+                  }
                 }
               }
             }
@@ -122,6 +211,27 @@
     width: 15%;
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 5px;
+
+    @media screen and (max-width: 1199px) {
+      width: 160px;
+      position: absolute;
+      right: 170px;
+    }
+
+    @media screen and (max-width: 767px) {
+      top: 7px;
+      right: 50px;
+      margin-top: 0;
+      background: #fff;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 31px;
+      padding: 0;
+
+    }
 
     .pane-content {
       a {
@@ -140,6 +250,16 @@
         &:hover, &:active {
           text-decoration: none;
         }
+
+        @media screen and (max-width: 767px) {
+          display: block;
+          font: 0/0 a;
+          color: transparent;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background: url(../img/phone.jpg) no-repeat 3px 3px;
+        }
       }
     }
   }
@@ -147,8 +267,29 @@
   .enquire {
     float: left;
     width: 15%;
+    margin-top: 5px;
     padding-left: 15px;
     padding-right: 15px;
+    position: absolute;
+    right: 0;
+
+    @media screen and (max-width: 1199px) {
+      width: 160px;
+    }
+
+    @media screen and (max-width: 767px) {
+      top: 7px;
+      right: 15px;
+      margin-top: 0;
+      background: #fff;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 31px;
+      padding: 0;
+
+    }
 
     .pane-content {
       a {
@@ -169,6 +310,16 @@
         &:hover, &:active {
           text-decoration: none;
           background-color: #e6e6e6;
+        }
+
+        @media screen and (max-width: 767px) {
+          display: block;
+          font: 0/0 a;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          color: transparent;
+          background: url(../img/mail.jpg) no-repeat 3px 4px;
         }
       }
     }

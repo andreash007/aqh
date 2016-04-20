@@ -1,0 +1,5 @@
+  //Column left
+
+  .panel-col-left {
+    @include make-md-column(8);
+  }

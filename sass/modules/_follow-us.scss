@@ -1,0 +1,53 @@
+// Follow us
+#node-17 {
+
+  p {
+    margin-bottom: 15px;
+    color: #959595;
+    line-height: 1.42857143;
+  }
+
+  .lyteShared {
+
+    a {
+      display: inline-block;
+      margin-right: 10px;
+
+      &:first-child {
+        width: 53px;
+        height: 24px;
+        background: url("../img/facebook_32.png") no-repeat;
+
+        &:hover {
+          background: url("../img/facebook_32_light.png") no-repeat;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 65px;
+        height: 24px;
+        background: url("../img/twitter_32.png") no-repeat;
+
+        &:hover {
+          background: url("../img/twitter_32_dark.png") no-repeat;
+        }
+      }
+
+      &:last-child {
+        @include transition(background 0.3s ease-in-out);
+        width: 36px;
+        height: 23px;
+        background: url("../img/googleplus_32.png") no-repeat;
+
+        &:hover {
+          @include transition(background 0.3s ease-in-out);
+          background: url("../img/googleplus_32_dark.png") no-repeat;
+        }
+      }
+
+      img {
+        display: none;
+      }
+    }
+  }
+}

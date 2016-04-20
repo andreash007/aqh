@@ -1,0 +1,55 @@
+.page-node-69{
+
+  // Radiance Rewards
+  #node-69{
+
+    .field-item p:last-child{
+      @extend h4;
+    }
+  }
+
+  .pane-views-promotions-block{
+
+    .views-row-1{
+      margin-bottom: 34px;
+      border-bottom: 2px solid #E6E6E6;
+    }
+
+    .views-field-body {
+
+      h2 {
+        font-weight: 700;
+      }
+
+      ul{
+        padding-left: 15px;
+        margin-bottom: 20px;
+
+        li{
+          @extend p;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .views-field-field-brochures{
+      margin-bottom: 34px;
+
+      .file {
+        display: block;
+        width: 257px;
+        height: 40px;
+        background: url("http://www.mccarthyhomes.com.au/assets/button-downloadbrochure.png") no-repeat;
+        img {
+          display: none;
+        }
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+          color: transparent;
+        }
+      }
+    }
+  }
+}

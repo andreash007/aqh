@@ -23,11 +23,17 @@
     color: #959595;
   }
 
+#mini-panel-details {
+
   .pane-node {
     margin-right: auto;
     margin-left: auto;
     max-width: 360px;
+    @media screen and (max-width: 991px){
+      max-width: 100%;
+    }
   }
+}
 
   .pane-node:last-child {
 

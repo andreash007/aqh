@@ -1,0 +1,67 @@
+.page-node-59{
+
+  // Web-form
+  #node-60{
+
+    @media screen and (min-width: 768px) {
+      .webform-component--suburb, .webform-component--job-title {
+        float: left;
+        width: 50%;
+        padding-right: 15px;
+      }
+
+      .webform-component--postcode, .webform-component--job-number {
+        float: left;
+        width: 50%;
+        padding-left: 15px;
+      }
+
+      .webform-component--job-number{
+        @include clearfix;
+      }
+    }
+
+    //Resume
+    #edit-submitted-resume-ajax-wrapper {
+      float: left;
+      width: 50%;
+      padding-right: 15px;
+
+      input{
+        margin-bottom: 20px;
+        padding-right: 0;
+        padding-top: 13px;
+        width: 260px;
+      }
+
+      // Upload button
+      button {
+        width: 170px;
+
+        &:before {
+          margin-right: 5px;
+          font: normal 14px/1 FontAwesome;
+          content: "\f093";
+        }
+      }
+    }
+
+    .form-actions{
+      float: right;
+      width: 50%;
+      margin-top: -78px;
+      padding-left: 15px;
+      text-align: right;
+
+      button{
+        width: 170px;
+
+        &:after{
+          margin-left: 5px;
+          font: normal 14px/1 FontAwesome;
+          content: "\f144";
+        }
+      }
+    }
+  }
+}
