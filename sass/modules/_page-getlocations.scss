@@ -1,0 +1,57 @@
+html body.page-getlocations {
+  margin-top: 0 !important;
+
+  #admin-menu {
+    display: none;
+  }
+
+  .views-field-field-gmap {
+    margin-bottom: 10px;
+
+    .location {
+      margin-top: 0;
+    }
+  }
+
+  .views-field-nothing {
+    text-align: center;
+
+    a{
+      @extend .btn-default;
+      display: inline-block;
+      margin-bottom: 0;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: #333;
+      background-color: #fff;
+      border-color: #ddd;
+      text-align: center;
+
+      &:hover {
+        color: #333;
+        background-color: #e6e6e6;
+        border-color: #bebebe;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

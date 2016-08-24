@@ -1,5 +1,5 @@
 // Import Compass integration
-@import "compass/css3";
+@import 'compass/css3';
 
 // Import Bootstrap Compass integration
 @import "bootstrap-compass";
@@ -20,8 +20,24 @@
 @import "modules/header";
 @import "modules/menu";
 @import "modules/breadcrumb";
-@import "modules/panel_col_right";
 @import "modules/footer";
-@import "modules/social_tab.scss";
+@import "modules/catalog";
+@import "modules/social_tab";
+@import "modules/lightbox";
 @import "modules/front";
 @import "modules/blog";
+@import "modules/panels-two-column";
+@import "modules/mini_panel_details";
+@import "modules/follow-us";
+@import "modules/house";
+@import "modules/program";
+@import "modules/careers";
+@import "modules/promotions";
+@import "modules/join";
+@import "modules/house-series";
+@import "modules/page-getlocations";
+@import "modules/g-map";
+@import "modules/tooltip";
+@import "modules/our-images";
+@import "modules/user";
+

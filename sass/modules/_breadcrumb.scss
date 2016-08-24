@@ -1,0 +1,49 @@
+.breadcrumb{
+  @extend .container;
+  padding: 0;
+  background-color: transparent;
+
+  .inline {display: none;}
+  .inline.last {display: block;}
+
+  .last {
+
+    a {
+      display: inline-block;
+      margin-bottom: 0;
+      padding: 10px 16px;
+      font-family: $font-stack;
+      font-weight: 500;
+      border-radius: 22px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1.33;
+      color: #fff;
+      background-color: #101010;
+      border-color: #030303;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+      background-image: none;
+      border: 1px solid transparent;
+      white-space: nowrap;
+      text-decoration: none;
+
+      &:hover{
+        text-decoration: none;
+        background: black;
+      }
+
+      &:active{
+        text-decoration: none;
+      }
+
+      &:before{
+        margin-right: 5px;
+        font: normal 14px/1 FontAwesome;
+        content: "\f053";
+      }
+    }
+  }
+}

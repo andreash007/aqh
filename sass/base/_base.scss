@@ -1,29 +1,195 @@
+body {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+
+  a{
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:visited{
+    text-decoration: none;
+  }
+  a:active, a:hover {
+    outline: 0;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #000;
+  }
+}
+
 h1, h2, h3 {
   font-family: proxima-nova,Helvetica,Arial,sans-serif;
+}
+
+h1{
+  @extend .container;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 38px;
+  line-height: 1.07142857;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 20px;
+  color: #000;
+
+}
+
+h2{
+  font-size: 22px;
+  line-height: 1.42857143;
+  font-weight: 100;
+  font-style: normal;
+  margin: 0 0 20px 0;
+  color: #222;
 }
 
 h3 {
   font-size: 18px;
   line-height: 1.07142857;
   font-weight: 400;
-  font-style: bold;
   margin: 0 0 20px 0;
   color: #222;
 }
 
-.field-name-field-body {
-  a {
-    font-weight: bold;
-    color: #000000;
-  }
+h4{
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 16px;
+  line-height: 1.42857143;
+  font-weight: 700;
+  font-style: normal;
+  margin: 0 0 20px 0;
+  color: #555;
+}
 
-  p {
-    font-family: Arial,Helvetica,sans-serif;
-    color: #555;
-    font-size: 14px;
-    line-height: 2;
-    font-weight: 300;
-    font-style: normal;
-    margin: 0 0 20px 0;
+
+p {
+  font-family: Arial,Helvetica,sans-serif;
+  color: #555;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0 0 20px 0;
+  &:last-child{
+    margin-bottom: 20px;
   }
 }
+
+.pane-pane-messages{
+  @extend .container;
+
+  .pane-content{
+    @include make-row();
+  }
+}
+
+.page-node, .page-taxonomy:not(.display-homes){
+
+  .pane-page-content {
+    @extend .container;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    & > .pane-content {
+      @include make-row();
+
+      @media screen and (max-width: 767px) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.page-taxonomy, .page-house-and-land-packages{
+
+  h1{
+    margin-top: 0;
+    padding-top: 50px;
+  }
+}
+
+.page-taxonomy{
+
+  .pane-page-content {
+    padding-top: 0!important;
+    padding-bottom: 50px;
+  }
+}
+
+.captcha{
+  margin-bottom: 20px;
+}
+
+.form-control{
+  padding: 10px 16px;
+  height: 50px;
+  font-size: 14px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+.btn-default, .btn-primary{
+  margin-bottom: 20px;
+  padding: 10px 16px;
+  font-family: $font-stack;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  border: 1px solid transparent;
+  border-radius: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: #101010;
+  border-color: #030303;
+
+  &:hover, &:active, &:focus{
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+    text-decoration: none;
+  }
+}
+
+.form-select{
+  font-family: Arial,Helvetica,sans-serif;
+  padding: 6px 25px 6px 12px;
+  width: 220px;
+  border-radius: 0;
+  background-color: #ededed;
+  letter-spacing: 0;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+  color: #333;
+  border-color: #ddd;
+
+  option{
+    color: #777;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

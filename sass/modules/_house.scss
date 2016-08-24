@@ -1,0 +1,390 @@
+
+.page-node-44, .node-type-house{
+
+  .carousel-inner, .pane-node-field-img {
+    max-height: 500px;
+
+    img {
+      width: 100%;
+      margin-left: 0;
+      margin-top: -150px;
+    }
+  }
+
+  .pane-node-field-img{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    img {
+      margin-top: -211px;
+    }
+  }
+}
+
+.node-type-house, .node-type-house-land, .node-type-display-homes{
+
+  h1{
+    margin-top: 0;
+  }
+
+  .field-type-getlocations-fields{
+
+    .adr{
+      margin-bottom: 25px;
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 1;
+      color: #000;
+
+      .street-address{
+        display: inline-block;
+      }
+    }
+  }
+
+  //Node house, Node house land, Node display homes
+  .node-house, .node-house-land, .node-display-homes{
+
+    .field-type-text-with-summary {
+
+      .field-label {
+        @extend h3;
+      }
+    }
+
+  }
+
+  .panel-col-right{
+
+    #mini-panel-house_options, #mini-panel-house_land_options{
+      @include transition(all .2s ease-in-out);
+      display: block;
+      padding: 0;
+      margin-bottom: 20px;
+      line-height: 1.42857143;
+      background-color: #ededed;
+      border: 0;
+      border-radius: 0;
+      -webkit-box-shadow: 0 0 4px rgba(0,0,0,.25);
+      box-shadow: 0 0 4px rgba(0,0,0,.25);
+
+      .panel-panel{
+        padding: 15px 20px;
+        color: #555;
+      }
+
+      .panel-col-first{
+        background-color: #383838;
+      }
+
+      .panel-col-second{
+
+        .inside{
+          display: table;
+          margin: 0;
+          width: 100%;
+          max-width: 100%;
+          font-size: 12px;
+
+          .pane-entity-field{
+            display: table-row;
+
+            .pane-title, .pane-content{
+              display: table-cell;
+            }
+            .pane-title{
+              text-align: left;
+              background-color: transparent;
+              border: 0!important;
+              padding: 3px 0!important;
+              font-weight: 700;
+              vertical-align: top;
+            }
+            .pane-content{
+              text-align: right;
+              background-color: transparent;
+              border: 0!important;
+              padding: 3px 0!important;
+              vertical-align: top;
+              color: #959595;
+            }
+          }
+          .pane-node-field-total-area{
+
+            .field-label{
+              position: absolute;
+              right: 70px;
+              font-weight: normal;
+              text-transform: lowercase;
+            }
+          }
+        }
+      }
+
+      .panel-col-third{
+        @include clearfix;
+        background-color: #ddd;
+
+        .pane-entity-field{
+          float: left;
+          line-height: 1;
+          padding: 4px 10px 4px 28px;
+          margin-right: 10px;
+          background: url(http://www.mccarthyhomes.com.au/img/icons_rooms.png) no-repeat;
+
+          &:not(:last-child){
+            border-right: 1px solid #8b8b8b;
+          }
+
+          .field-item {
+            display: inline-block;
+            padding: 3px 5px;
+            min-width: 10px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1;
+            background-color: #393939;
+            border: 1px solid #f5f5f5;
+            border-radius: 10px;
+            vertical-align: baseline;
+            white-space: nowrap;
+            text-align: center;
+          }
+        }
+
+        .pane-node-field-bathrooms{
+          background-position-y: -35px;
+        }
+
+        .pane-node-field-garage{
+          background-position-y: -75px;
+        }
+      }
+
+      .panel-col-fourth{
+        background-color: #383838;
+        padding: 15px 5px;
+        height: 66px;
+
+        .pane-block{
+          @include make-xs-column(4);
+          padding-left: 6px;
+          padding-right: 6px;
+
+          .pane-content {
+
+            a {
+              @extend .btn-default;
+              display: block;
+              margin-bottom: 0;
+              width: 100%;
+              font-weight: 600;
+              letter-spacing: 2px;
+              color: #333;
+              background-color: #fff;
+              border-color: #ddd;
+              text-align: center;
+
+              &:hover {
+                color: #333;
+                background-color: #e6e6e6;
+                border-color: #bebebe;
+              }
+
+              &:after{
+                margin-left: 4px;
+                font: normal 14px/1 FontAwesome;
+              }
+            }
+          }
+        }
+
+        .pane-views-house-details-images{
+          @media screen and (max-width: 768px) {
+            display: none;
+          }
+
+
+            .views-row{
+            display: none;
+
+            a:after{
+              content: "\f03e";
+              @media (max-width: 1199px) and (min-width: 992px) {
+                display: none !important;
+              }
+            }
+          }
+
+          .views-row-first{
+            display: block;
+          }
+        }
+
+        .pane-views-house-map-map{
+
+          .pane-content {
+
+            a:after {
+              content: "\f041";
+            }
+          }
+        }
+
+        .pane-views-house-details-plan{
+          @media screen and (max-width: 768px) {
+            display: none;
+          }
+          .views-row {
+            display: none;
+          }
+
+          .views-row-first {
+            display: block;
+          }
+
+          .pane-content {
+
+            a:after {
+              content: "";
+              background: url(http://www.mccarthyhomes.com.au/img/icon-floorplans.png) 0 1px no-repeat;
+              width: 14px;
+              height: 15px;
+              font: 0/0 a;
+              color: transparent;
+              text-shadow: none;
+              background-color: transparent;
+              border: 0;
+              display: inline-block;
+              position: absolute;
+              @media (max-width: 1199px) and (min-width: 992px) {
+                display: none !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .pane-node-field-brochures{
+
+      .pane-title{
+        @extend h3;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e6e6e6;
+      }
+
+      .pane-content{
+
+        .file{
+          @extend .btn;
+          font-family: $font-stack;
+          font-size: 12px;
+          border-radius: 22px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: #333;
+          background-color: #fff;
+          border-color: #ddd;
+
+          &:hover{
+            color: #333;
+            background-color: #e6e6e6;
+            border-color: #bebebe;
+          }
+
+          img{
+            display: none;
+          }
+
+          a{
+            color: #333;
+
+            &:hover{
+              text-decoration: none;
+            }
+
+            &:before{
+              content: "\f1c1";
+              display: inline-block;
+              font: normal 14px/1 FontAwesome;
+              font-size: inherit;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              margin-right: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.node-type-house-land, .node-type-display-homes{
+
+  h1{
+    margin-bottom: 15px;
+  }
+
+  .pane-page-content {
+
+    ul {
+      padding-left: 20px;
+
+      li {
+        line-height: 2;
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+.node-type-display-homes{
+
+  //Node display homes
+  .node-display-homes{
+    margin-bottom: 20px;
+  }
+
+  .field-name-field-display-open{
+
+    .field-label{
+      @extend h4;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
+    .field-items{
+      @extend h4;
+      display: inline-block;
+    }
+  }
+}
+
+.page-node-158 .pane-page-content .pane-node h2.pane-title{
+  margin-top: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

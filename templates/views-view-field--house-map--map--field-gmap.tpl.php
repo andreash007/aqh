@@ -1,0 +1,1 @@
+<a href="<?php print $output; ?>" rel="lightframe[map|scrolling: auto;]">Map</a>

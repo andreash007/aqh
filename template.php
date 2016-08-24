@@ -18,8 +18,7 @@ function aqh_preprocess_html (&$vars) {
       drupal_add_html_head($noindex, 'noindex_follow');
     }
   }
-  // Add Font Awesome
-  // drupal_add_css('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array('group' => CSS_THEME, 'type' => 'external'));
+
   // Add Local styles
   drupal_add_css('http://localhost:8080/dev/aqh/css/style.css', array('group' => CSS_THEME, 'type' => 'external'));
 }

@@ -1,10 +1,9 @@
 //Fonts
-//Fonts
-@include font-face("ProximaNova", font-files(
-    "/sites/all/themes/aqh/fonts/ProximaNova/fonts/ProximaNova-Regular.ttf",
-    "/sites/all/themes/aqh/fonts/ProximaNova/fonts/ProximaNova-Regular.eot",
-    "/sites/all/themes/aqh/fonts/ProximaNova/fonts/ProximaNova-Regular.woff",
-    "/sites/all/themes/aqh/fonts/ProximaNova/fonts/ProximaNova-Regular.svg"
+@include font-face("ProximaNova", inline-font-files(
+    "/ProximaNova/ProximaNova-Regular.ttf", truetype,
+    "/ProximaNova/ProximaNova-Regular.eot", eot,
+    "/ProximaNova/ProximaNova-Regular.woff", woff,
+    "/ProximaNova/ProximaNova-Regular.svg", svg
 ));
 
 $font-stack: 'ProximaNova',Helvetica,Arial,sans-serif;

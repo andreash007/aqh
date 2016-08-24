@@ -1,0 +1,85 @@
+#lightbox{
+
+  #nextLink{
+    background: url('../img/next.gif') right 15% no-repeat;
+  }
+
+  #prevLink{
+    background: url('../img/prev.gif') left 15% no-repeat;
+  }
+
+  #bottomNav{
+    margin-bottom: 0;
+    height: 28px;
+
+    #bottomNavClose{
+      margin-top: 0;
+    }
+
+    #bottomNavZoom, #bottomNavZoomOut{
+      left: 0;
+      display: none!important;
+    }
+  }
+
+  #frameContainer{
+    padding: 0!important;
+  }
+}
+
+#lightboxFrame{
+  width: 100%;
+  border: none;
+}
+
+
+//LightBox Front
+.front {
+  #lightbox2-overlay {
+    opacity: 1 !important;
+  }
+
+  #imageDataContainer {
+    height: 0 !important;
+    position: absolute;
+    top: -25px;
+    right: 10px;
+
+    #bottomNavClose {
+      width: 32px;
+      height: 32px;
+      background: url(../img/rs-minimal-white.png) -64px 0;
+      background-color: #000 !important;
+      background-color: rgba(0, 0, 0, .75);
+      margin-top: 0;
+    }
+  }
+
+  #lightbox {
+    top: 30px !important;
+    height: 90%!important;
+
+    #frameContainer {
+      height: 100%!important;
+    }
+
+    #outerImageContainer {
+      width: 100% !important;
+      height: 100%!important;
+      background: black !important;
+
+      #lightboxFrame {
+        border-color: black !important;
+        width: 100% !important;
+        height: 100%!important;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

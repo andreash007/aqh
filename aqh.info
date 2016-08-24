@@ -38,6 +38,8 @@ stylesheets[all][] = css/style.css
 ;scripts[] = js/smoothscroll.js
 scripts[] = js/lyteShare.js
 scripts[] = js/global.js
+scripts[] = js/bootstrap_bonus.js
+scripts[] = js/bootstrap-hover-dropdown.js
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Panels layouts

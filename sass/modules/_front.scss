@@ -1,5 +1,121 @@
+.front.page-node .pane-page-content {
+  padding: 0;
+  width: 100%;
+
+  > .pane-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .pane-node-content {
+    h1 {
+      display: none;
+    }
+
+  }
+
+  #views-bootstrap-carousel-1 {
+    .views-field-description {
+      position: absolute;
+      bottom: 21%;
+      width: 100%;
+      text-align: center;
+
+      a {
+        color: black;
+        font-family: "ProximaNova", Helvetica, Arial, sans-serif;
+        font-size: 25px;
+        font-weight: 300;
+        text-decoration: underline;
+
+        @media (max-width: 991px) {
+          position: relative;
+          top: -70px;
+        }
+
+        @media (max-width: 768px) {
+          top: 45px;
+        }
+
+        @media (max-width: 640px) {
+          display: none;
+        }
+      }
+    }
+
+    .item img {
+      width: auto;
+      margin: 0 auto;
+    }
+  }
+}
+
 //SLIDER
 .pane-views-slideshow-block {
+  .slide-item{
+    @media screen and (max-width: 767px) {
+      height: 50vh!important
+    }
+  }
+
+  .carousel-inner {
+    background: #000;
+    height: 100vh;
+
+    .item {
+      width: 100%;
+      height: 100vh;
+
+      &:first-child {
+        a {
+          &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -32px;
+            margin-left: -32px;
+            width: 64px;
+            display: block;
+            height: 64px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            -webkit-transition: .3s;
+            -moz-transition: .3s;
+            transition: .3s;
+            background: url(../img/rs-minimal-white.png) no-repeat 0 -32px;
+            background-color: #000;
+            background-color: rgba(0, 0, 0, .75);
+          }
+          &:before {
+            content: "Play Short Video";
+            position: absolute;
+            top: 55%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            display: block;
+
+            @media (max-width: 767px) {
+              top: 60%;
+            }
+            @media (max-width: 500px) {
+              top: 68%;
+            }
+          }
+        }
+      }
+
+      .field-content {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
   .views-slideshow-cycle-main-frame-row {
     width: 100%!important;
     height: auto!important;
@@ -15,21 +131,174 @@
   }
 }
 
+//CONTROL-BTN/PAGER
+.view-slideshow {
+
+  .carousel-indicators {
+
+    @media (max-width: 600px) {
+      left: 0;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    li {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 6px;
+      border-radius: 50%;
+      background: #CCC;
+      background: rgba(255,255,255,.5);
+      box-shadow: 0 0 1px 0 rgba(0,0,0,.4);
+      position: relative;
+
+      &.active {
+        background: #fff;
+        &:after {
+          content: "";
+          width: 21px;
+          height: 21px;
+          display: inline-block;
+          padding: 5px 11px 10px 6px;
+          background: url(../img/slider_bullet_bg.png) 0 0 no-repeat;
+          position: absolute;
+          top: -6px;
+          left: -7px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  .carousel-control.left {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 80px;
+    bottom: 20px;
+    top: initial;
+    left: initial;
+    display: block;
+    cursor: pointer;
+    z-index: 21;
+    background: none;
+    opacity: 1;
+
+    @media (max-width: 700px) {
+      display: none;
+    }
+
+    &:hover {
+      background: none;
+    }
+
+    .icon-prev {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      cursor: pointer;
+      background: url(../img/rs-custom-arrows.png) transparent;
+      border-radius: 0;
+      background-position: 0 0;
+
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  .carousel-control.right {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    top: initial;
+    left: initial;
+    display: block;
+    cursor: pointer;
+    z-index: 21;
+    background: none;
+    opacity: 1;
+
+    @media (max-width: 700px) {
+      display: none;
+    }
+
+    .icon-next{
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      cursor: pointer;
+      background: url(../img/rs-custom-arrows.png) transparent;
+      border-radius: 0;
+      background-position: -40px 0;
+
+      &:before {
+        content: none;
+      }
+    }
+  }
+}
+
+//SLIDMENU
 .pane-views-slideshow-slidemenu{
-  @extend .container;
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+
+
+  @media screen and (max-width: 767px) {
+    position: static;
+    padding: 0;
+  }
+
+  ul {
+    padding: 0;
+    text-align: center;
+
+    @media screen and (max-width: 767px) {
+      margin: 0 -15px 0 -16px;
+    }
+  }
+  
+  >.pane-content {
+    @extend .container;
+  }
 
   .views-row {
-    float: left;
     width: 25%;
     min-height: 60px;
     list-style: none;
     position: relative;
+    display: inline-block;
+    font-size: 0;
+
+    @media screen and (max-width: 991px) {
+      width: 50%;
+      margin-bottom: 2px;
+    }
+
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      display: block;
+    }
+
+    &:last-child {
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
     .field-content {
       > a {
         position: absolute;
-        left: 1px;
         top: 0;
-        right: 1px;
         bottom: 60px;
         z-index: 5;
         font-family: proxima-nova,Helvetica,Arial,sans-serif;
@@ -43,6 +312,15 @@
         -o-transition: all .5s ease-in-out;
         transition: all .5s ease-in-out;
 
+        @media screen and (min-width: 768px) {
+          left: 1px;
+          right: 1px;
+        }
+
+        @media screen and (max-width: 767px) {
+          position: static;
+        }
+
         &:before {
           font-family: FontAwesome;
           content: '\f105';
@@ -52,6 +330,10 @@
           position: absolute;
           top: 12px;
           right: 10px;
+
+          @media screen and (max-width: 767px) {
+            content: "\f138";
+          }
         }
 
         &:hover {
@@ -64,12 +346,20 @@
             position: absolute;
             top: 12px;
             right: 10px;
+
+            @media screen and (max-width: 767px) {
+              content: "\f138";
+            }
           }
 
           .wrap {
             opacity: 1;
             bottom: 0;
             visibility: visible;
+
+            @media screen and (max-width: 991px) {
+              display: none;
+            }
           }
         }
       }
@@ -84,7 +374,7 @@
       min-height: 60px;
       color: #fff;
       font-family: $font-stack;
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 300;
       z-index: 21;
       -webkit-transition: all .3s ease-in-out;
@@ -98,24 +388,34 @@
 
     &.views-row-1{
       h4 {
-        background: url(../img/grid_hd_expressionseries.png) 20px 10px no-repeat #000;
+        background: url(../img/grid_hd_expressionseries.png) -3px 10px no-repeat #000;
         font: 0/0 a;
         color: transparent;
 
         &:hover {
-          background: url(../img/grid_hd_expressionseries_70.png) 20px 10px no-repeat #000;;
+          background: url(../img/grid_hd_expressionseries_70.png) -3px 10px no-repeat #000;
+        }
+
+        @media (max-width: 1199px) and (min-width: 768px) {
+          background-size: 175px 32px!important;
+          background-position: 20px 15px!important
         }
       }
     }
 
     &.views-row-2{
       h4 {
-        background: url(../img/grid_hd_blueprintseries.png) 20px 15px no-repeat #000;
+        background: url(../img/grid_hd_blueprintseries.png) -27px 15px no-repeat #000;
         font: 0/0 a;
         color: transparent;
 
         &:hover {
-          background: url(../img/grid_hd_blueprintseries_70.png) 20px 15px no-repeat #000;
+          background: url(../img/grid_hd_blueprintseries_70.png) -27px 15px no-repeat #000;
+        }
+
+        @media (max-width: 1199px) and (min-width: 768px) {
+          background-size: 175px 23px!important;
+          background-position: 20px 20px!important;
         }
       }
     }
@@ -141,13 +441,16 @@
         text-decoration: underline;
         font-size: 14px;
         font-family: $font-stack;
+        color: white;
       }
 
       p {
         font-size: 12px;
         line-height: 1.5;
         font-family: $font-stack;
+        color: white;
       }
     }
   }
 }
+
